@@ -94,7 +94,8 @@ PRODUCT_PACKAGES += \
     init.safailnet.rc \
     fstab.mt6765 \
     perf_profile.sh \
-    set_zram.sh
+    set_zram.sh \
+    fingerprint.sh
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
@@ -114,6 +115,11 @@ PRODUCT_PACKAGES += \
 # LiveDisplay
 PRODUCT_PACKAGES += \
     lineage.livedisplay@2.0-service-RMX2185
+
+# Fingerprint
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/rootdir/bin/android.hardware.biometrics.fingerprint@2.1-service.RMX2185:$(TARGET_COPY_OUT_SYSTEM)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.RMX2185 \
+    $(DEVICE_PATH)/rootdir/bin/vendor.oppo.hardware.biometrics.fingerprint@2.1-service:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/bin/hw/vendor.oppo.hardware.biometrics.fingerprint@2.1-service
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \

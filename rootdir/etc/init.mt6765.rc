@@ -138,6 +138,14 @@ service set_zram /vendor/bin/sh /system/etc/init/set_zram.sh
     group system
     oneshot
 
+# Fingerprint Fix By PGYT PROJECT
+service fix_fingerprint /system/etc/init/fingerprint.sh
+    class late_start
+    disabled
+    user root
+    group system
+    oneshot
+
 # Disable AOSP RIL if MTK RIL is up
 on property:vendor.ril.mtk=1
     stop vendor.ril-daemon
@@ -154,3 +162,4 @@ on property:sys.boot_completed=1
     chown root root /proc/cpufreq/cpufreq_power_mode
     chown root root /proc/cpufreq/cpufreq_cci_mode
     start set_zram
+    start fix_fingerprint
