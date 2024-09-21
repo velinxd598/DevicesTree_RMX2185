@@ -138,8 +138,7 @@ service set_zram /vendor/bin/sh /system/etc/init/set_zram.sh
     group system
     oneshot
 
-# Fingerprint Fix By PGYT PROJECT
-service fix_fingerprint /system/etc/init/fingerprint.sh
+service fix_fingerprint /vendor/bin/sh /system/etc/init/fingerprint.sh
     class late_start
     disabled
     user root
