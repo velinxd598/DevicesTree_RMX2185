@@ -22,15 +22,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/realme/RMX2185/device.mk)
 
 # Inherit some common Syberia stuff.
-$(call inherit-product, vendor/syberia/common.mk)
-SYBERIA_BUILD_TYPE := COMMUNITY 
+TARGET_INCLUDE_PIXEL_CHARGER := true
+$(call inherit-product, vendor/arrow/config/common.mk
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := syberia_RMX2185
+PRODUCT_NAME := arrow_RMX2185
 PRODUCT_DEVICE := RMX2185
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme G35 Series
 PRODUCT_MANUFACTURER := realme
+DEVICE_MAINTAINER := VelinXD
 
 TARGET_BOOT_ANIMATION_RES := 720
 
