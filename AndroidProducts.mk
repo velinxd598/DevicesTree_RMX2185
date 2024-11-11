@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/syberia_RMX2185.mk
+    $(LOCAL_DIR)/arrow_RMX2185.mk
 
 COMMON_LUNCH_CHOICES := \
-    syberia_RMX2185-user \
-    syberia_RMX2185-userdebug \
-    syberia_RMX2185-eng
+    arrow_RMX2185-user \
+    arrow_RMX2185-userdebug \
+    arrow_RMX2185-eng
