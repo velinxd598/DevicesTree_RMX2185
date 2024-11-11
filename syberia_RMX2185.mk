@@ -23,7 +23,7 @@ $(call inherit-product, device/realme/RMX2185/device.mk)
 
 # Inherit some common Syberia stuff.
 $(call inherit-product, vendor/syberia/common.mk)
-SYBERIA_BUILD_TYPE := OFFICIAL
+SYBERIA_BUILD_TYPE := COMMUNITY 
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := syberia_RMX2185
